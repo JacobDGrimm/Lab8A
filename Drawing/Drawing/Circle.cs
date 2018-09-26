@@ -15,5 +15,18 @@ namespace Drawing
         private int diameter;
         private int locX = 0, locY = 0;
         private Ellipse circle = null;
+
+        public Circle(int diameter)
+        {
+            this.diameter = diameter;
+        }
+
+        void IDraw.SetLocation(int xCoord, int yCoord)
+        {
+            this.locX = xCoord;
+            this.locY = yCoord;
+        }
     }
+
+    
 }
