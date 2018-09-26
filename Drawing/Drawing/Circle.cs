@@ -44,6 +44,15 @@ namespace Drawing
             Canvas.SetLeft(this.circle, this.locX);
             canvas.Children.Add(this.circle);
         }
+
+        void IColor.SetColor(Color color)
+        {
+            if (this.circle != null)
+            {
+                SolidColorBrush brush = new SolidColorBrush(color);
+                this.circle.Fill = brush;
+            }
+        }
     }
 
     
