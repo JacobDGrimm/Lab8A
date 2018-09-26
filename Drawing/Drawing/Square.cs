@@ -44,5 +44,14 @@ namespace Drawing
             this.locX = xCoord;
             this.locY = yCoord;
         }
+
+        void IColor.SetColor(Color color)
+        {
+            if (this.rect != null)
+            {
+                SolidColorBrush brush = new SolidColorBrush(color);
+                this.rect.Fill = brush;
+            }
+        }
     }
 }
