@@ -39,6 +39,12 @@ namespace Drawing
                 drawSquare.SetLocation((int)mouseLocation.X, (int)mouseLocation.Y);
                 drawSquare.Draw(drawingCanvas);
             }
+
+            if (mySquare is IColor)
+            {
+                IColor colorSquare = mySquare;
+                colorSquare.SetColor(Colors.BlueViolet);
+            }
         }
     }
 }
