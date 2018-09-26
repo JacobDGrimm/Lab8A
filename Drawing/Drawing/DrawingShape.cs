@@ -14,7 +14,7 @@ namespace Drawing
     {
         protected int size;
         protected int locX = 0, locY = 0;
-        protected Shape = null;
+        protected Shape shape = null;
 
         public DrawingShape(int size)
         {
