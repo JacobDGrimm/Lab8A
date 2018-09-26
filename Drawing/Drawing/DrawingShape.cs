@@ -36,6 +36,18 @@ namespace Drawing
             }
         }
 
+        public virtual void Draw(Canvas canvas)
+        {
+            if (this.shape == null)
+            {
+                throw new InvalidOperationException("Shape is null");
+            }
 
+            this.shape.Height = this.size;
+            this.shape.Width = this.size;
+            Canvas.SetTop(this.shape, this.locY);
+            Canvas.SetLeft(this.shape, this.locX);
+            canvas.Children.Add(this.shape);
+        }
     }
 }
