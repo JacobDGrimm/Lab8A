@@ -12,5 +12,30 @@ namespace Drawing
 {
     abstract class DrawingShape
     {
+        protected int size;
+        protected int locX = 0, locY = 0;
+        protected Shape = null;
+
+        public DrawingShape(int size)
+        {
+            this.size = size;
+        }
+
+        public void SetLocation(int xCoord, int yCoord)
+        {
+            this.locX = xCoord;
+            this.locY = yCoord;
+        }
+
+        public void SetColor(Color color)
+        {
+            if (this.shape != null)
+            {
+                SolidColorBrush brush = new SolidColorBrush(color);
+                this.shape.Fill = brush;
+            }
+        }
+
+
     }
 }
